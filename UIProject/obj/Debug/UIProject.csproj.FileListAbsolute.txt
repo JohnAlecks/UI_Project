@@ -1,1 +1,9 @@
 C:\Users\johnw\Desktop\Working\Windows\UI_Project\UIProject\UIProject\bin\Debug\UIProject.exe.config
+C:\Users\johnw\Desktop\Working\Windows\UI_Project\UIProject\UIProject\bin\Debug\UIProject.exe
+C:\Users\johnw\Desktop\Working\Windows\UI_Project\UIProject\UIProject\bin\Debug\UIProject.pdb
+C:\Users\johnw\Desktop\Working\Windows\UI_Project\UIProject\UIProject\obj\Debug\UIProject.csprojResolveAssemblyReference.cache
+C:\Users\johnw\Desktop\Working\Windows\UI_Project\UIProject\UIProject\obj\Debug\UIProject.Properties.Resources.resources
+C:\Users\johnw\Desktop\Working\Windows\UI_Project\UIProject\UIProject\obj\Debug\UIProject.csproj.GenerateResource.Cache
+C:\Users\johnw\Desktop\Working\Windows\UI_Project\UIProject\UIProject\obj\Debug\UIProject.exe
+C:\Users\johnw\Desktop\Working\Windows\UI_Project\UIProject\UIProject\obj\Debug\UIProject.pdb
+C:\Users\johnw\Desktop\Working\Windows\UI_Project\UIProject\UIProject\obj\Debug\UIProject.LoginForm.resources

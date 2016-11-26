@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIProject", "UIProject\UIProject.csproj", "{EF065BED-A0C5-44F2-9C32-8E09F2C4F967}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Graphic_Content", "Graphic_Content", "{5D6DA542-A118-49C4-AB7C-2AB9FDFEE203}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Pictures\login_ic.png = ..\..\..\..\..\Pictures\login_ic.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
