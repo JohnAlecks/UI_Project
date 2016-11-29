@@ -16,3 +16,15 @@ C:\Users\John Whisker\Desktop\Working\Windows\UI_Project\UIProject\obj\Debug\UIP
 C:\Users\John Whisker\Desktop\Working\Windows\UI_Project\UIProject\obj\Debug\UIProject.LoginForm.resources
 C:\Users\John Whisker\Desktop\Working\Windows\UI_Project\UIProject\obj\Debug\UIProject.Properties.Resources.resources
 C:\Users\John Whisker\Desktop\Working\Windows\UI_Project\UIProject\obj\Debug\UIProject.csproj.GenerateResource.Cache
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\bin\Debug\UIProject.exe.config
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Debug\UIProject.exe
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Debug\UIProject.pdb
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\bin\Debug\CriminalRecord.mdf
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\bin\Debug\CriminalRecord_log.ldf
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\bin\Debug\UIProject.exe
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\bin\Debug\UIProject.pdb
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Debug\UIProject.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Debug\UIProject.LoginForm.resources
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Debug\UIProject.Properties.Resources.resources
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Debug\UIProject.SignUpForm.resources
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Debug\UIProject.csproj.GenerateResource.Cache

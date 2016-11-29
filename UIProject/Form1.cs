@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UIProject.Securities;
 
 namespace UIProject
 {
@@ -38,7 +39,9 @@ namespace UIProject
                 LoginInfo temp = new LoginInfo();
                 temp.EmployeeID = read.GetString(0).Trim();
                 temp.Username = read.GetString(1).Trim();
+                //string password = SaltPassword.ComputeHash(txtPassword.Text, "SHA512", null);
                 temp.Password = read.GetString(2).Trim();
+
                 LoginTable.Add(temp);
             }
             con.Close();
@@ -74,6 +77,12 @@ namespace UIProject
             else {
                 MessageBox.Show("Incorect username or password!!!");
             }
+        }
+
+        private void btn_register_Click(object sender, EventArgs e)
+        {
+            SignUpForm signup = new SignUpForm();
+            signup.Show();
         }
     }
 }

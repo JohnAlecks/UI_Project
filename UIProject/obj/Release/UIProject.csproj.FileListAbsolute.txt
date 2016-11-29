@@ -1,0 +1,11 @@
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\bin\Release\UIProject.exe.config
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\bin\Release\CriminalRecord.mdf
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\bin\Release\CriminalRecord_log.ldf
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\bin\Release\UIProject.exe
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\bin\Release\UIProject.pdb
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Release\UIProject.LoginForm.resources
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Release\UIProject.Properties.Resources.resources
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Release\UIProject.SignUpForm.resources
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Release\UIProject.csproj.GenerateResource.Cache
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Release\UIProject.exe
+\\Mac\Home\Desktop\untitled folder\UI_Project\UIProject\obj\Release\UIProject.pdb
