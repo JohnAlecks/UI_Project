@@ -14,6 +14,7 @@ namespace UIProject
 {
     public partial class LoginForm : Form
     {
+        bool flag = false;
         List<LoginInfo> LoginTable = new List<LoginInfo>();
         public LoginForm()
         {
@@ -40,14 +41,30 @@ namespace UIProject
                 LoginInfo temp = new LoginInfo();
                 temp.LoginID = read.GetInt32(0);
                 temp.Email = read.GetString(1).Trim();
-                //string password = SaltPassword.ComputeHash(txtPassword.Text, "SHA512", null);
                 temp.Password = read.GetString(2).Trim();
-
                 LoginTable.Add(temp);
             }
             con.Close();
         }
+        private bool checkRecord(string email, string box) {
+            try {
+                LoginInfo temp = LoginTable.Find(item => item.Email == email);
+                Console.Write(temp.Password);
+                if (SaltPassword.VerifyHash("JohnWick", "SHA512", temp.Password) == true)
+                {
+                    MessageBox.Show("Welcome My Nigga");
+                    return true;
+                }
+                else {
+                    return false;
+                };
 
+                
+            } catch (Exception e) {
+                Console.WriteLine(e);
+            }
+            return false;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -57,21 +74,10 @@ namespace UIProject
         {
             Application.Exit();
         }
-        private bool checkInfo(String email, String password) {
-            try
-            {
-                if (LoginTable.Find(item => item.Email == email).Password.Equals(password))
-                {
-                    return true;
-                }
-            } catch (Exception e) {
-                return false;
-            }
-            return false;           
-        }
+        
         private void loginBtn_Click(object sender, EventArgs e)
         {   
-            if (checkInfo(usernameTextBox.Text, passwordTextBox.Text))
+            if (checkRecord(usernameTextBox.Text, passwordTextBox.Text) == true)
             {
                 MessageBox.Show("Login Completed");
             }
@@ -84,6 +90,11 @@ namespace UIProject
         {
             SignUpForm signup = new SignUpForm();
             signup.Show();
+        }
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

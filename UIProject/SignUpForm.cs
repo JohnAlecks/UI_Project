@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UIProject.Securities;
 
 namespace UIProject
 {
@@ -59,8 +60,10 @@ namespace UIProject
             string sql = "INSERT INTO LoginInformation (User_Login_ID, Email, Password) VALUES (@id, @email, @password)";
             SqlCommand command = new SqlCommand(sql, con);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
-            command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = "Nguyen@gmail.com";
-            command.Parameters.Add("@password", SqlDbType.VarChar, 40).Value = "JohnWick";
+            command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = "quangminh3@gmail.com";
+            string ePass = SaltPassword.ComputeHash("JohnWick", "SHA512", null);
+            Console.WriteLine(ePass);
+            command.Parameters.Add("@password", SqlDbType.VarChar).Value = ePass;
             command.ExecuteNonQuery();
             Console.WriteLine("COMPLETE");
         }

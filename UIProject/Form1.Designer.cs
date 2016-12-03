@@ -80,7 +80,7 @@
             // usernameTextBox
             // 
             this.usernameTextBox.Location = new System.Drawing.Point(212, 194);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(782, 31);
             this.usernameTextBox.TabIndex = 3;
@@ -88,18 +88,19 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(212, 306);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(782, 31);
             this.passwordTextBox.TabIndex = 4;
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // loginBtn
             // 
             this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.loginBtn.Image = ((System.Drawing.Image)(resources.GetObject("loginBtn.Image")));
             this.loginBtn.Location = new System.Drawing.Point(400, 427);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(6);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.loginBtn.Size = new System.Drawing.Size(320, 88);
@@ -121,7 +122,7 @@
             this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
             this.closeBtn.Location = new System.Drawing.Point(946, 17);
-            this.closeBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(6);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.closeBtn.Size = new System.Drawing.Size(52, 50);
@@ -156,7 +157,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "LoginForm";
             this.Text = "Login";
             this.ResumeLayout(false);
