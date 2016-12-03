@@ -16,7 +16,7 @@ The following **required** functionality is completed :
 * [ ] User can delete record store in the database
 * [ ] User can search for record store in the database
 * [ ] User can modify record store in the database
-* [ ] Have login/logout and permission system for each user type
+* [X] Have login/logout and permission system for each user type
 
 The following **optional** features are implemented:
 
