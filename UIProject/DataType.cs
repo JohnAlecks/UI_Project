@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 namespace UIProject
 {
     class LoginInfo {
-        private String username;
+        private String email;
         private String password;
-        private String employeeID;
+        private int Login_ID;
 
-        public String Username {
+        public String Email {
             get {
-                return username;
+                return email;
             }
             set {
                 if (value != null && value != "") {
-                    username = value;
+                    email = value;
                 }
             }
         }
@@ -27,7 +27,7 @@ namespace UIProject
                 return password;
             }
             set {
-                if (value.ToString().Length > 6)
+                if (value.ToString().Length >= 6)
                 {
                     password = value;
                 }
@@ -36,12 +36,13 @@ namespace UIProject
                 }
             }
         }
-        public String EmployeeID {
+        public int LoginID 
+        {
             get {
-                return employeeID;
+                return Login_ID;
             }
             set {
-                employeeID = value;
+                Login_ID = value;
             }
         }
     }
@@ -81,16 +82,17 @@ namespace UIProject
     }
 
     class UserInfo {
-        private String realname;
+        private String fullname;
         private String address;
-        private String employeeID;
+        private String phone;
+        private int UserInfo_ID;
 
-       public String RealName {
+       public String Fullname {
             get {
-                return realname;
+                return fullname;
             }
             set {
-                realname = value;
+                fullname = value;
             }
 
         }
@@ -108,15 +110,28 @@ namespace UIProject
 
         }
 
-        public String EmployeeID
+        public String Phone
         {
             get
             {
-                return employeeID;
+                return phone;
             }
             set
             {
-                employeeID = value;
+                phone = value;
+            }
+
+        }
+
+        public int UserInfoID
+        {
+            get
+            {
+                return UserInfo_ID;
+            }
+            set
+            {
+                UserInfo_ID = value;
             }
 
         }

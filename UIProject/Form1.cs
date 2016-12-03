@@ -23,10 +23,11 @@ namespace UIProject
         private void InitForm() {
 
             String appPath = Application.StartupPath;
+            Console.WriteLine(appPath + "Hello");
             string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+appPath+"\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
             SqlConnection con = new SqlConnection(constring);
             
-            string sql = "SELECT A.EmployeeID, A.Username,A.Password FROM LoginInfomation as A";
+            string sql = "SELECT A.Login_ID, A.Email,A.Password FROM LoginInformation as A";
             SqlCommand com = new SqlCommand(sql, con);
 
             if (con.State != ConnectionState.Open)
@@ -37,8 +38,8 @@ namespace UIProject
             while (read.Read())
             {
                 LoginInfo temp = new LoginInfo();
-                temp.EmployeeID = read.GetString(0).Trim();
-                temp.Username = read.GetString(1).Trim();
+                temp.LoginID = read.GetInt32(0);
+                temp.Email = read.GetString(1).Trim();
                 //string password = SaltPassword.ComputeHash(txtPassword.Text, "SHA512", null);
                 temp.Password = read.GetString(2).Trim();
 
@@ -56,10 +57,10 @@ namespace UIProject
         {
             Application.Exit();
         }
-        private bool checkInfo(String username, String password) {
+        private bool checkInfo(String email, String password) {
             try
             {
-                if (LoginTable.Find(item => item.Username == username).Password.Equals(password))
+                if (LoginTable.Find(item => item.Email == email).Password.Equals(password))
                 {
                     return true;
                 }

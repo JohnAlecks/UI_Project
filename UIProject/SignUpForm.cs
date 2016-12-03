@@ -18,7 +18,7 @@ namespace UIProject
             InitializeComponent();
             getData();
         }
-        String id = "";
+        int id;
         private void getData() {
             
             String appPath = Application.StartupPath;
@@ -28,7 +28,7 @@ namespace UIProject
             {
                 con.Open();
             }
-            string sql = "SELECT A.EmployeeID, A.RealName, A.Address FROM UserInformation as A";
+            string sql = "SELECT A.UserInfo_ID, A.Fullname, A.Address FROM UserInformations as A";
             SqlCommand command = new SqlCommand(sql, con);
             SqlDataReader read = command.ExecuteReader();
             
@@ -36,10 +36,10 @@ namespace UIProject
             while (read.Read())
             {
                 UserInfo temp = new UserInfo();
-                temp.RealName = read.GetString(1).Trim();
+                temp.Fullname = read.GetString(1).Trim();
                 temp.Address = read.GetString(2).Trim();
-                comboBox1.Items.Add(temp.RealName);
-                id = temp.EmployeeID = read.GetString(0).Trim();
+                comboBox1.Items.Add(temp.Fullname);
+                id = temp.UserInfoID = read.GetInt32(0);
 
             }
             con.Close();
@@ -50,19 +50,19 @@ namespace UIProject
         {
             String appPath = Application.StartupPath;
             string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath + "\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
+            Console.WriteLine(appPath + "Hello");
             SqlConnection con = new SqlConnection(constring);
             if (con.State != ConnectionState.Open)
             {
                 con.Open();
             }
-            string sql = "INSERT INTO dbo.LoginInfomation (EmployeeID, Username, Password) VALUES (@id, @Username, @Password)";
+            string sql = "INSERT INTO LoginInformation (User_Login_ID, Email, Password) VALUES (@id, @email, @password)";
             SqlCommand command = new SqlCommand(sql, con);
-            command.Parameters.Add("@username", "abc");
-            command.Parameters.Add("@password", "abc");
-            command.Parameters.Add("@id", id);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@email", SqlDbType.VarChar, 38).Value = "Nguyen@gmail.com";
+            command.Parameters.Add("@password", SqlDbType.VarChar, 40).Value = "JohnWick";
             command.ExecuteNonQuery();
-
-            con.Close();
+            Console.WriteLine("COMPLETE");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
