@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UIProject.Securities;
+using static UIProject.Securities.Cookies;
 
 namespace UIProject
 {
@@ -28,7 +29,7 @@ namespace UIProject
             string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+appPath+"\\CriminalRecord.mdf;Integrated Security=True;Connect Timeout=30";
             SqlConnection con = new SqlConnection(constring);
             
-            string sql = "SELECT A.Login_ID, A.Email,A.Password FROM LoginInformation as A";
+            string sql = "SELECT UserInfo_ID, Email, Password FROM LoginInformation, UserInformations WHERE UserInfo_ID = User_Login_ID";
             SqlCommand com = new SqlCommand(sql, con);
 
             if (con.State != ConnectionState.Open)
@@ -39,8 +40,10 @@ namespace UIProject
             while (read.Read())
             {
                 LoginInfo temp = new LoginInfo();
-                temp.LoginID = read.GetInt32(0);
+                temp.UserLogin = read.GetInt32(0);
+                Console.WriteLine(temp.UserLogin);
                 temp.Email = read.GetString(1).Trim();
+                Console.WriteLine(temp.Email);
                 temp.Password = read.GetString(2).Trim();
                 LoginTable.Add(temp);
             }
@@ -52,7 +55,8 @@ namespace UIProject
                 Console.Write(temp.Password);
                 if (SaltPassword.VerifyHash("JohnWick", "SHA512", temp.Password) == true)
                 {
-                    MessageBox.Show("Welcome My Nigga");
+                    SessionInfo.UserID = temp.UserLogin;
+                    Console.WriteLine(SessionInfo.UserID);
                     return true;
                 }
                 else {

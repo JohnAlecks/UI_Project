@@ -10,7 +10,16 @@ namespace UIProject
         private String email;
         private String password;
         private int Login_ID;
+        private int User_Login;
 
+        public int UserLogin {
+            get {
+                return User_Login;
+            }
+            set {
+                User_Login = value;
+            }
+        }
         public String Email {
             get {
                 return email;

@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Securities\Cookies.cs" />
     <Compile Include="Securities\SaltPassword.cs" />
     <Compile Include="SignUpForm.cs">
       <SubType>Form</SubType>
